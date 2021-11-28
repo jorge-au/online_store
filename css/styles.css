@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* nav Bootstrap */
+.nav-link{
+    font-size: 1.2rem;
+    color: black;
+}
+.nav-item{
+    padding: 0 1.5rem;
+}
+
+
+/* Seccion principal */
+.section__inicio{
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+.slide{
+    margin-top: 0;
+}
+.slide img{
+    height:calc(100vh - 80px);
+}
+
+
+/*seccion nosotros */
+.nosotros{
+    background-color: #e8e8e8;
+    margin-top: 80px;
+}
+.nosotros__caja1{
+    height: 50px;
+    margin-bottom: 50px;
+}
+.nosotros__titulo{
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+.nosotros__caja2{
+    width: 600px;
+    height: auto;
+}
+.nosotros__parrafo{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 50px;
+}
+.nosotros__caja3{
+    width: 600px;
+    height: auto;
+}
+.nosotros__imagen{
+    width: 100%;
+    border-radius: 3px;
+}
+
+
+/* Seccion Productos */
+.productos{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top:80px;
+    position: relative;
+}
+.productos__titulo{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    left: 40%;
+}
+.productos__contenedor{
+    width: 280px;
+    height: 500px;
+    margin-top: 100px;
+    margin-left: 25px;
+}
+.productos__pc1{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.productos__laptop{
+    width: 100%;
+}
+.productos__cuerpo{
+    width: 100%;
+}
+
+.productos__parrafo{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 2px;
+}
+.productos__precio{
+  text-align: center;
+  font-size: 1rem;
+}
+.productos__boton{
+    margin-left: 35%;
+}
+.productos__botonComprar{
+    border: 1px solid black;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color:#2424ff;
+    color: #fff;
+    border: 2px solid;
+    width: 100px;
+}
+.productos__botonComprar:hover{
+    background-color:#5252ff;
+}
+
+.tienda{
+    width: 100%;
+    height: 80px;   
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.tienda__boton{
+  width: 230px;
+  padding: 10px;
+  border: 2px solid #525252;
+  border-radius: 4px;
+  margin: 15px;
+  color: #000000;
+  font-size: 1.2rem;
+  background-color: #fff;
+}
+.tienda__boton > a{
+    color: #000000;
+    text-decoration: none;
+} 
+.tienda__boton:hover{
+    color: #fff;
+    background-color: #C0C0C0;
+}
+
+
+/* Servicios */
+.section__servicios{
+    width: 100%;
+    height: 670px;
+    background-color: #e8e8e8;
+    margin-top: 50px;
+}.servicios__titulo{
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    left: 40%;
+}
+
+.padre{
+    width: inherit;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap:10px;
+    margin-top: 70px;
+    
+}
+.hijos{
+    width: 250px;   
+    height: 260px;
+}
+.ventas{
+    width: 70px;
+    height: 80px;
+    margin-left: 80px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.ventas__subtitulo{
+    text-align: center;
+}
+.ventas__texto{
+    text-align: center;
+}
+
+
+/*  seccion Contacto */
+.section__contacto{
+    width: 100%;
+    height: 600px;
+    margin-top: 30px;
+    position: relative;
+}
+.form__titulo{
+   padding: 30px 0;
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 2.2rem;
+}
+.form{
+    height: auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+.form__label{
+   font-size: 1.2rem;
+   margin-left: 20px;
+   margin-bottom: 10px;
+   color: #525252;
+}
+.form__input{
+    width: 80%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    height: 40px;
+    border: 2px solid #d6d6d6;
+    border-radius: 5px;
+}
+.form__textarea{
+    width:80%;
+    margin-left: 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+.form__boton{
+    width: 25%;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 4px 10px;
+    border: 2px solid #d6d6d6;
+    border-radius: 6px;
+    background-color: #575757;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.form__boton:hover{
+    background-color:#c2c2c2;
+}
+.imagen_derecha{
+    width: 500px;
+    height: 420px;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+.sobre{
+    width: 100%;
+}
+
+
+/* Pie de pagina */
+.footer{
+    width: 100%;
+    height: 250px;
+    background-color: #e8e8e8;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.enlaces__items{
+    display: block;
+    padding: 3px;
+    text-decoration: none;
+    color: #000000;
+}
+.redes__items{
+    display: block;
+    padding: 3px;
+    text-decoration: none;
+    color: #000000;
+}
+.enlaces, .redes, .contacto{
+    margin-top: 20px;
+}
+
+
+/* *********************************************** */
+/* Media query para Tablet */
+@media  (max-width: 768px) {
+    .section__inicio{
+        width: 100%;
+        height: calc(80vh - 80px);
+    }
+    .slide{
+        margin-top: 0;
+    }
+    .slide img{
+        height:calc(80vh - 80px);
+    }
+
+    .nosotros__parrafo{
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+    
+    .nosotros__imagen{
+        border-radius: 3px;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height:auto;
+        position: relative;
+    }
+    .productos__titulo{
+        position: absolute;
+        left: 27%;
+    }
+    .productos__titulo > h2{
+        text-align: center;
+        padding: 10px;
+    }
+    .servicios__titulo-h2{
+        position: relative;
+        right: 90px;
+    }
+    .form{
+        position: relative;
+        left: 20px;
+    }
+    .imagen_derecha{
+        display: none;
+    }
+    .form__input{
+        width: 90%;
+    }
+    .form__textarea{
+        width: 90%;
+    }
+    
+}
+
+/* Query ppara celular */
+/********************************************************************/
+@media (max-width: 320px){
+    .section__inicio{
+        width: 100%;
+        height: calc(50vh - 80px);
+    }
+    .slide{
+        margin-top: 0;
+    }
+    .slide img{
+        height:calc(50vh - 80px);
+    }
+    
+    .nosotros__parrafo{
+        font-size: 1rem;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-self: center;
+        height: auto;
+
+    }
+    .productos__titulo{
+        left: 10px;
+    }
+    .productos__contenedor{
+       margin-top: 10px;
+    }
+    .tienda{
+        width: 100%;
+    }
+    .section__servicios{
+        height: auto;
+    }
+    .padre{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .section__contacto{
+     
+        width: 100%;
+    }
+    .form{
+    
+        width: 93%;
+        margin-left:-8px;
+    }
+    .form__label{
+        font-size: 1.2rem;
+    }
+    .form__input{
+        width: 98%;
+        margin-left: 5px;
+    }
+    .form__textarea{
+        width: 98%;
+        margin-left: 5px;
+    }
+    .form__boton{
+        width: 50%;
+        margin-left: 70px;
+    }
+    .footer{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .enlaces__items{
+        text-align: center;
+    }
+}
