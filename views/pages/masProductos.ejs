@@ -7,9 +7,29 @@
     <header>
         <%- include('../partials/nav.ejs') %>
     </header>
-    <div>
-      
-    </div>
+        <section id="productos" class="productos">
+
+            <div class="productos__titulo">
+                <h2>Nuestros Productos</h2>
+              </div>
+              
+            <% productos.forEach((prod)=>{ %>
+                <div class="productos__contenedor">
+                    <div class="productos__pc1">
+                        <img src="<%= prod.imagen %>" alt="" class="productos__laptop">
+                        <div class="productos__cuerpo">
+                        <p class="productos__parrafo"><%= prod.descripcion %></p>
+                        <div class="productos__precio">$50.000 pesos</div>
+                        <div class="productos__boton">
+                            <button class="productos__botonComprar">Comprar</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                <% }); %>  
+        </section>
+       
+    
     <!-- footer -->
     <%- include('../partials/footer.ejs') %>
 </body>

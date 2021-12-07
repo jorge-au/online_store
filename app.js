@@ -1,24 +1,27 @@
 const express = require('express');
 const app = express();
+const routes = require('./routes/indexRoutes');
 const path = require('path');
+const port = 3000;
+const databaseConnection = require('./config/database');
 
-//config 
+//conexion a Mysql
+databaseConnection.connect();
+
+//config para usar archivos tipo json
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
+//config de vistas y public
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
-app.get('/', (req, res)=>{
-    res.render("index");
-});
-
-app.get('/masProductos', (req, res)=>{
-    res.render('./pages/masProductos');
-})
-
+//conf de rutas
+app.use('/', routes);
 
 //servidor
-app.listen(3000, ()=>{
-    console.log("Server conrriendo en el puerto 3000");
+app.listen(port, ()=>{
+    console.log(`Server corriendo en el puerto ${port}`);
 });

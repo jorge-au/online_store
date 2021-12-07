@@ -12,24 +12,21 @@
     padding: 0 1.5rem;
 }
 
-
 /* Seccion principal */
 .section__inicio{
     width: 100%;
-    height: calc(100vh - 80px);
-}
-.slide{
-    margin-top: 0;
+    height: 500px;
 }
 .slide img{
-    height:calc(100vh - 80px);
+    height:85vh;
+    width: 100%;
 }
-
 
 /*seccion nosotros */
 .nosotros{
     background-color: #e8e8e8;
     margin-top: 80px;
+    height: 600px;
 }
 .nosotros__caja1{
     height: 50px;
@@ -58,7 +55,6 @@
     border-radius: 3px;
 }
 
-
 /* Seccion Productos */
 .productos{
     width: 100%;
@@ -75,10 +71,12 @@
     left: 40%;
 }
 .productos__contenedor{
-    width: 280px;
-    height: 500px;
+    width: 290px;
+    height: 470px;
     margin-top: 100px;
     margin-left: 25px;
+    border: 3px solid #A4A3A1;
+    border-radius: 5px;
 }
 .productos__pc1{
     width: 100%;
@@ -86,7 +84,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 .productos__laptop{
     width: 100%;
@@ -251,14 +248,20 @@
 }
 .imagen_derecha{
     width: 500px;
-    height: 420px;
+    height: 400px;
     position: absolute;
-    top: 100px;
+    top: 140px;
     right: 100px;
+    background-color: cadetblue;
+    border: 2px solid #c2c2c2;
 }
-.sobre{
+.maps{
     width: 100%;
+    height: 100%;
 }
+/* .sobre{
+    width: 100%;
+} */
 
 
 /* Pie de pagina */
