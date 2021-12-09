@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //conf de rutas
-app.use('/', routes);
+app.use('/',routes);
 
 //servidor
 app.listen(port, ()=>{

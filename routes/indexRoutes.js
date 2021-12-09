@@ -1,15 +1,15 @@
 const express = require('express');
 const routes = express.Router();
 
-routes.get('/', (req, res)=>{
-    res.render("index");
-});
 
-const home = require('../controllers/tiendaControllers');
+const {
+    renderHome,
+    verMasProdcutos
+} = require('../controllers/tiendaControllers');
 
-routes.get('/home', home =>{
-    console.log(home)
-})
+routes.get('/', renderHome);
+
+routes.get('/masProductos', verMasProdcutos);
 
 
 module.exports = routes;
