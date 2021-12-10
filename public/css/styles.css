@@ -11,7 +11,13 @@
 .nav-item{
     padding: 0 1.5rem;
 }
-
+.btn{
+    margin-right: 5px;
+}
+.link_login{
+    color: #fff;
+    text-decoration: none;
+}
 /* Seccion principal */
 .section__inicio{
     width: 100%;
@@ -20,6 +26,14 @@
 .slide img{
     height:85vh;
     width: 100%;
+}
+
+.icon_users{
+    color: gray;
+    margin-right: 20px;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
 }
 
 /*seccion nosotros */

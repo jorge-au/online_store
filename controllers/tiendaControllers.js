@@ -16,7 +16,29 @@ const verMasProdcutos = (req, res)=>{
     })
 }
 
+const formContacto = (req, res)=>{
+    const {nombre,email,mensaje} = req.body;
+    databaseConnection.query('INSERT INTO formcontacto(nombre,email,mensaje)VALUES(?, ?, ?)',[nombre,email,mensaje],(error, data)=>{
+        if (error){
+            console.log(error);
+        }else{
+            res.render('pages/mensajeEnviado');
+        }
+    })
+}
+
+const loginUser = (req, res)=>{
+    res.render('pages/logIn');
+}
+
+const signUp = (req, res)=>{
+    res.render('pages/signUp');
+}
+
 module.exports = {
     renderHome,
-    verMasProdcutos
+    verMasProdcutos,
+    formContacto,
+    loginUser,
+    signUp
 }
