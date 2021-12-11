@@ -1,8 +1,0 @@
--- TABLA PARA REGISTROS DE CLIENTES
-
-CREATE TABLE Registro_clientes (
-    id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(200)NOT NULL,
-    apellido VARCHAR(200)NOT NULL,
-    fecha_naciemiento DATE()
-)
