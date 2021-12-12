@@ -75,71 +75,27 @@
     height: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    align-items: center;
     margin-top:80px;
     position: relative;
 }
+
 .productos__titulo{
     width: 300px;
     height: 50px;
     position: absolute;
     left: 40%;
 }
-.productos__contenedor{
-    width: 290px;
-    height: 470px;
-    margin-top: 100px;
-    margin-left: 25px;
-    border: 3px solid #A4A3A1;
-    border-radius: 5px;
-}
-.productos__pc1{
-    width: 100%;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.productos__laptop{
-    width: 100%;
-}
-.productos__cuerpo{
-    width: 100%;
-}
 
-.productos__parrafo{
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 2px;
+.card{
+    margin-top: 80px;
 }
-.productos__precio{
-  text-align: center;
-  font-size: 1rem;
-}
-.productos__boton{
-    margin-left: 35%;
-}
-.productos__botonComprar{
-    border: 1px solid black;
-    font-size: 1.1rem;
-    padding: 5px 10px;
-    text-align: center;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color:#2424ff;
-    color: #fff;
-    border: 2px solid;
-    width: 100px;
-}
-.productos__botonComprar:hover{
-    background-color:#5252ff;
-}
-
-.tienda{
+.card-img-top{
     width: 100%;
-    height: 80px;   
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+    height: 210px;
+}
+.btn-primary{
+    margin-left: 30%;
 }
 .tienda__boton{
   width: 230px;
@@ -150,6 +106,8 @@
   color: #000000;
   font-size: 1.2rem;
   background-color: #fff;
+  margin-left: 40%;
+  margin-top: 50px;
 }
 .tienda__boton > a{
     color: #000000;

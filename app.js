@@ -5,6 +5,7 @@ const path = require('path');
 const port = 3000;
 const databaseConnection = require('./config/database');
 
+
 //conexion a Mysql
 databaseConnection.connect();
 

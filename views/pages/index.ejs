@@ -18,13 +18,13 @@
             <div id="carouselExampleControls" class="carousel slide"  data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="img/portatil3.jpg" class="d-block  img__carousel" alt="..." />
+                  <img src="img/pc_desktop_baner.jpg" class="d-block  img__carousel" alt="..." />
                 </div>
                 <div class="carousel-item">
                   <img src="img/pc_desktop_baner.jpg" class="d-block  img__carousel" alt="..." />
                 </div>
                 <div class="carousel-item">
-                    <img src="img/celular.jpg" class="d-block  img__carousel" alt="" /> 
+                    <img src="img/pc_desktop_baner.jpg" class="d-block  img__carousel" alt="" /> 
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"> 
@@ -64,114 +64,24 @@
             <h2>Nuestros Productos</h2>
           </div>
 
-          <div class="productos__contenedor">
-            <div class="productos__pc1">
-              <img src="img/notebook1.jpg" alt="" class="productos__laptop"/>
-              <div class="productos__cuerpo">
-                <p class="productos__parrafo">Hp Pavillion 360<br/>SSD 540 gb, Ram 8gb</p>
-                <div class="productos__precio">$50.000 pesos</div>
-                <div class="productos__boton">
-                  <button class="productos__botonComprar">Comprar</button>
+          <% dataProductos.forEach((prod)=>{ %>
+              <div class="card" style="width: 18rem;">
+                <img src="<%= prod.imagen %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center"><%= prod.nombre %></h5>
+                  <p class="card-text text-center"><%= prod.descripcion %></p>
+                  <p class="card-text text-center"><%= prod.precio %></p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="productos__contenedor">
-            <div class="productos__pc1">
-              <img src="img/notebook1.jpg" alt="" class="productos__laptop">
-              <div class="productos__cuerpo">
-                <p class="productos__parrafo">Hp Pavillion 360<br>SSD 540 gb, Ram 8gb</p>
-                <div class="productos__precio">$50.000 pesos</div>
-                <div class="productos__boton">
-                  <button class="productos__botonComprar">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="productos__contenedor">
-            <div class="productos__pc1">
-              <img src="img/notebook1.jpg" alt="" class="productos__laptop">
-              <div class="productos__cuerpo">
-                <p class="productos__parrafo">Hp Pavillion 360<br>SSD 540 gb, Ram 8gb</p>
-                <div class="productos__precio">$50.000 pesos</div>
-                <div class="productos__boton">
-                  <button class="productos__botonComprar">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="productos__contenedor">
-            <div class="productos__pc1">
-              <img src="img/notebook1.jpg" alt="" class="productos__laptop">
-              <div class="productos__cuerpo">
-                <p class="productos__parrafo">Hp Pavillion 360<br>SSD 540 gb, Ram 8gb</p>
-                <div class="productos__precio">$50.000 pesos</div>
-                <div class="productos__boton">
-                  <button class="productos__botonComprar">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="productos__contenedor">
-            <div class="productos__pc1">
-              <img src="img/laptop.jpg" alt="" class="productos__laptop">
-              <div class="productos__cuerpo">
-                <p class="productos__parrafo">Hp Pavillion 360<br>SSD 540 gb, Ram 8gb</p>
-                <div class="productos__precio">$50.000 pesos</div>
-                <div class="productos__boton">
-                  <button class="productos__botonComprar">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="productos__contenedor">
-            <div class="productos__pc1">
-              <img src="img/laptop.jpg" alt="" class="productos__laptop">
-              <div class="productos__cuerpo">
-                <p class="productos__parrafo">Hp Pavillion 360<br>SSD 540 gb, Ram 8gb</p>
-                <div class="productos__precio">$50.000 pesos</div>
-                <div class="productos__boton">
-                  <button class="productos__botonComprar">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="productos__contenedor">
-            <div class="productos__pc1">
-              <img src="img/laptop.jpg" alt="" class="productos__laptop">
-              <div class="productos__cuerpo">
-                <p class="productos__parrafo">Hp Pavillion 360<br>SSD 540 gb, Ram 8gb</p>
-                <div class="productos__precio">$50.000 pesos</div>
-                <div class="productos__boton">
-                  <button class="productos__botonComprar">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="productos__contenedor">
-            <div class="productos__pc1">
-              <img src="img/laptop.jpg" alt="" class="productos__laptop">
-              <div class="productos__cuerpo">
-                <p class="productos__parrafo">Hp Pavillion 360<br>SSD 540 gb, Ram 8gb</p>
-                <div class="productos__precio">$50.000 pesos</div>
-                <div class="productos__boton">
-                  <button class="productos__botonComprar">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <% }) %>;
         </section>
         
          <!-- boton de ir a Tienda -->
          <div class="tienda">
-          <button class="tienda__boton"><a href="/masProductos">Ver mas Productos</a></button>
+          <button class="tienda__boton">
+            <a href="/masProductos">Ver mas Productos</a>
+          </button>
         </div>
            
         <!-- Seccion Servicios -->

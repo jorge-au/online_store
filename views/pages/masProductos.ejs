@@ -15,19 +15,16 @@
               </div>
               
             <% data.forEach((prod)=>{ %>
-                <div class="productos__contenedor">
-                    <div class="productos__pc1">
-                        <img src="<%= prod.imagen %>" alt="" class="productos__laptop">
-                        <div class="productos__cuerpo">
-                        <p class="productos__parrafo"><%= prod.descripcion %></p>
-                        <div class="productos__precio"><%= prod.precio %></div>
-                        <div class="productos__boton">
-                            <button class="productos__botonComprar">Comprar</button>
-                        </div>
-                        </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="<%= prod.imagen %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= prod.nombre %></h5>
+                      <p class="card-text"><%= prod.descripcion %></p>
+                      <p class="card-text"><%= prod.precio %></p>
+                      <a href="#" class="btn btn-primary">Comprar</a>
                     </div>
-                    </div>
-                <% }); %>  
+                  </div>
+             <% }); %>  
         </section>
        
     

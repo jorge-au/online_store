@@ -1,7 +1,10 @@
 const databaseConnection = require('../config/database');
+const info = require('../productos.json');
 
 const renderHome = (req, res)=>{
-    res.render('pages/index');
+    res.render('pages/index',{
+        dataProductos:info
+    })
 }
 
 const verMasProdcutos = (req, res)=>{
