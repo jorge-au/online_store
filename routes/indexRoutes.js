@@ -7,7 +7,8 @@ const {
     verMasProdcutos,
     formContacto,
     loginUser,
-    signUp
+    signUp,
+    registro
 } = require('../controllers/tiendaControllers');
 
 routes.get('/', renderHome);
@@ -19,6 +20,9 @@ routes.post('/mensajeEnviado',formContacto);
 routes.get('/logIn', loginUser);
 
 routes.get('/signUp', signUp);
+
+routes.post('/registroEnviado', registro)
+
 
 
 module.exports = routes;

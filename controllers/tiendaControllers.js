@@ -25,7 +25,7 @@ const formContacto = (req, res)=>{
         if (error){
             console.log(error);
         }else{
-            res.render('pages/mensajeEnviado');
+           res.render('pages/mensajeEnviado')
         }
     })
 }
@@ -35,7 +35,17 @@ const loginUser = (req, res)=>{
 }
 
 const signUp = (req, res)=>{
-    res.render('pages/signUp');
+    res.render('pages/signUp')
+}
+const registro = (req, res)=>{
+    const{nombre,apellido,email,clave} = req.body;
+    databaseConnection.query('INSERT INTO registro(nombre,apellido,email,clave)VALUES(?,?,?,?)',[nombre,apellido,email,clave],(error, data)=>{
+        if(error){
+            console.log(error);
+        }else{
+            res.render('pages/registroEnviado');
+        }
+    })
 }
 
 module.exports = {
@@ -43,5 +53,6 @@ module.exports = {
     verMasProdcutos,
     formContacto,
     loginUser,
-    signUp
+    signUp,
+    registro
 }

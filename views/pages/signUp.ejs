@@ -10,15 +10,19 @@
 <body>
     <h1 class="title">Pagina de Registro</h1>
 
-    <form action="" class="form">
-        <label class="form__label" for="name">Nombre</label>
-        <input class="form__input" type="text" name="name" id="name">
-        <label class="form__label" for="name">Apellido</label>
+    <form action="/registroEnviado" method="POST" class="form">
+        <label class="form__label" for="nombre">Nombre</label>
+        <input class="form__input" type="text" name="nombre" id="nombre">
+
+        <label class="form__label" for="apellido">Apellido</label>
         <input class="form__input" type="text" name="apellido" id="apellido">
-        <label class="form__label" for="name">Email</label>
+
+        <label class="form__label" for="email">Email</label>
         <input class="form__input" type="email" name="email" id="email">
-        <label class="form__label" for="password">Ingrese una clave</label>
-        <input class="form__input" type="password" name="password" id="password">
+
+        <label class="form__label" for="clave">Contraseña</label>
+        <input class="form__input" type="password" name="clave" id="clave">
+
         <p class="condiciones"><a href="#">Acepto los terminos y condiciones</a></p>
         <button class="form__btn" type="submit" name="registrarse" id="registro">Registrarse</button>
         <p class="text">Ya tienes una cuenta? <a href="/login">Inicia sesion</a></p>
