@@ -31,7 +31,8 @@
 .nosotros{
     background-color: #e8e8e8;
     margin-top: 80px;
-    height: 600px;
+    height: auto;
+    width: auto;
 }
 .nosotros__caja1{
     height: 50px;
@@ -45,6 +46,8 @@
 .nosotros__caja2{
     width: 600px;
     height: auto;
+    /* background-color: lawngreen; */
+    padding: 50px 0;
 }
 .nosotros__parrafo{
     text-align: center;
@@ -54,6 +57,8 @@
 .nosotros__caja3{
     width: 600px;
     height: auto;
+    /* background-color: lightsalmon; */
+    padding: 20px 0;
 }
 .nosotros__imagen{
     width: 100%;
