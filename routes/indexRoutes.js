@@ -5,7 +5,7 @@ const routes = express.Router();
 const {
     renderHome,
     verMasProdcutos,
-    formContacto,
+    mensaje,
     loginUser,
     signUp,
     registro
@@ -15,7 +15,7 @@ routes.get('/', renderHome);
 
 routes.get('/masProductos', verMasProdcutos);
 
-routes.post('/mensajeEnviado',formContacto);
+routes.post('/mensajeEnviado',mensaje);
 
 routes.get('/logIn', loginUser);
 

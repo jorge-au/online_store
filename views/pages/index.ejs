@@ -15,7 +15,7 @@
 
         <main class="main">
           <section id="inicio" class="section__inicio">
-            
+           
           </section>
         </main>
 
@@ -45,8 +45,8 @@
           </div>
 
           <% dataProductos.forEach((prod)=>{ %>
-              <div class="card" style="width: 18rem;">
-                <img src="<%= prod.imagen %>" class="card-img-top" alt="...">
+              <div class="card">
+                <a href="#"> <img src="<%= prod.imagen %>" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                   <h5 class="card-title text-center"><%= prod.nombre %></h5>
                   <p class="card-text text-center"><%= prod.descripcion %></p>
@@ -127,7 +127,7 @@
             <input type="email" name="email" id="email"  class="form__input" required>
             <label for="mensaje" class="form__label">Mensaje</label>
             <textarea name="mensaje" id="mensaje" cols="30" rows="7" class="form__textarea" placeholder="Escriba aqui..."></textarea>
-           <input type="submit" value="Enviar" class="form__boton" id="send">
+           <input type="submit" value="Enviar" class="form__boton" id="send" onclick="alert('Mensaje Enviado')">
           </form>
 
           <div class="imagen_derecha">

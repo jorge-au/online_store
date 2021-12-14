@@ -19,9 +19,9 @@ const verMasProdcutos = (req, res)=>{
     })
 }
 
-const formContacto = (req, res)=>{
+const mensaje = (req, res)=>{
     const {nombre,email,mensaje} = req.body;
-    databaseConnection.query('INSERT INTO formcontacto(nombre,email,mensaje)VALUES(?, ?, ?)',[nombre,email,mensaje],(error, data)=>{
+    databaseConnection.query('INSERT INTO mensaje(nombre,email,mensaje)VALUES(?, ?, ?)',[nombre,email,mensaje],(error, data)=>{
         if (error){
             console.log(error);
         }else{
@@ -38,8 +38,8 @@ const signUp = (req, res)=>{
     res.render('pages/signUp')
 }
 const registro = (req, res)=>{
-    const{nombre,apellido,email,clave} = req.body;
-    databaseConnection.query('INSERT INTO registro(nombre,apellido,email,clave)VALUES(?,?,?,?)',[nombre,apellido,email,clave],(error, data)=>{
+    const{nombre,apellido,email,contraseña} = req.body;
+    databaseConnection.query('INSERT INTO registro(nombre,apellido,email,contraseña)VALUES(?,?,?,?)',[nombre,apellido,email,contraseña],(error, data)=>{
         if(error){
             console.log(error);
         }else{
@@ -51,7 +51,7 @@ const registro = (req, res)=>{
 module.exports = {
     renderHome,
     verMasProdcutos,
-    formContacto,
+    mensaje,
     loginUser,
     signUp,
     registro
