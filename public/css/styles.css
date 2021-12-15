@@ -30,9 +30,9 @@
 /*seccion nosotros */
 .nosotros{
     background-color: #e8e8e8;
-    margin-top: 80px;
+    margin-top: 20px;
     height: auto;
-    width: auto;
+    width: 100%;
 }
 .nosotros__caja1{
     height: 50px;
@@ -57,7 +57,6 @@
 .nosotros__caja3{
     width: 600px;
     height: auto;
-    /* background-color: lightsalmon; */
     padding: 20px 0;
 }
 .nosotros__imagen{
@@ -92,6 +91,12 @@
 .card-img-top{
     width: 100%;
     height: 210px;
+}
+.card-title{
+    text-align: center;
+}
+.card-text{
+    text-align: center;
 }
 .btn-primary{
     margin-left: 30%;
@@ -300,7 +305,7 @@
     }
     .servicios__titulo-h2{
         position: relative;
-        right: 90px;
+        right:0;
     }
     .form{
         position: relative;
@@ -318,9 +323,8 @@
     
 }
 
-/* Query ppara celular */
-/********************************************************************/
-@media (max-width: 320px){
+/* media query para celular 425 */
+@media  screen and (max-width: 576px){
     .section__inicio{
         width: 100%;
         height: calc(50vh - 80px);
@@ -332,38 +336,105 @@
         height:calc(50vh - 80px);
     }
     
-    .nosotros__parrafo{
-        font-size: 1rem;
+    /* seccion nosotros */
+    .nosotros{
+        margin-top: 20px;
+        width: 100%;
     }
+    .nosotros__caja1{
+        height: 50px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .nosotros__titulo{
+        line-height: 50%;
+        text-decoration: underline;
+    }
+    .nosotros__caja2{
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .nosotros__parrafo{
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+    .nosotros__caja3{
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* seccion productos */
     .productos{
         display: grid;
         grid-template-columns: 1fr;
-        align-self: center;
         height: auto;
-
+        position: relative;
     }
     .productos__titulo{
-        left: 10px;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        left: 0;
     }
-    .productos__contenedor{
-       margin-top: 10px;
+    .productos__titulo h2{
+        text-align: center;
+        text-decoration: underline;
+    }
+    .container{
+        height: auto;
+        width: 100%;
+        margin-top: 80px;
+    }
+    .card-body{
+        width: 200px;
+    }
+    .card{
+        display: flex;
+        align-items: center;
     }
     .tienda{
         width: 100%;
+        height: 100px;
+        position: relative;
     }
+    .tienda__boton{
+        width: 250px;
+        padding: 10px;
+        font-size: 1.2rem;
+        margin: 17px 30%;
+    }
+
+    /* secccion servicios */
     .section__servicios{
+        width: 100%;
         height: auto;
+        position: relative;
     }
+    .servicios__titulo{
+        height: 50px;
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+    .servicios__titulo-h2´{
+        font-size: 1.5rem;
+        position: absolute;
+        text-align: center;
+    }
+    
     .padre{
-        display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;  
+        align-items: center;
+        justify-content: center;
     }
+
+    /* seccion contacto */
     .section__contacto{
-     
         width: 100%;
     }
     .form{
-    
         width: 93%;
         margin-left:-8px;
     }
@@ -379,9 +450,437 @@
         margin-left: 5px;
     }
     .form__boton{
-        width: 50%;
-        margin-left: 70px;
+        width: 70%;
+        margin: 20px auto;
+        padding: 7px 0;
     }
+
+    /* footer */
+    .footer{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .enlaces__items{
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* media query para celular 425 */
+@media  screen and (max-width: 425px) {
+    .section__inicio{
+        width: 100%;
+        height: calc(50vh - 80px);
+    }
+    .slide{
+        margin-top: 0;
+    }
+    .slide img{
+        height:calc(50vh - 80px);
+    }
+    
+    /* seccion nosotros */
+    .nosotros{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .nosotros__caja1{
+        height: 50px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .nosotros__titulo{
+        line-height: 50%;
+        text-decoration: underline;
+    }
+    .nosotros__caja2{
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .nosotros__parrafo{
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+    .nosotros__caja3{
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* seccionm productos */
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        position: relative;
+    }
+    .productos__titulo{
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+    .productos__titulo h2{
+        text-align: center;
+        text-decoration: underline;
+    }
+    .container{
+        height: auto;
+        width: 100%;
+        margin-top: 80px;
+    }
+    .card{
+        display: flex;
+        align-items: center;
+    }
+    .tienda{
+        width: 100%;
+        height: 100px;
+        position: relative;
+    }
+    .tienda__boton{
+        width: 250px;
+        padding: 10px;
+        font-size: 1.2rem;
+        margin: 17px 23%;
+    }
+
+    /* secccion servicios */
+    .section__servicios{
+        height: auto;
+        position: relative;
+    }
+    .servicios__titulo{
+        height: 50px;
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+    .servicios__titulo-h2´{
+        font-size: 1.5rem;
+        position: absolute;
+        text-align: center;
+    }
+    
+    .padre{
+        grid-template-columns: 1fr;  
+    }
+
+    /* seccion contacto */
+    .section__contacto{
+        width: 100%;
+    }
+    .form{
+        width: 80%;
+        margin:auto
+    }
+    .form__label{
+        font-size: 1.2rem;
+    }
+    .form__input{
+        width: 98%;
+        margin-left: 5px;
+    }
+    .form__textarea{
+        width: 98%;
+        margin-left: 5px;
+    }
+    .form__boton{
+        width: 70%;
+        margin: 20px auto;
+        padding: 7px 0;
+    }
+
+    /* footer */
+    .footer{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .enlaces__items{
+        text-align: center;
+    }
+}
+
+
+
+
+/* media query para celular 375 */
+@media screen and (max-width: 375px) {
+    .section__inicio{
+        width: 100%;
+        height: calc(50vh - 80px);
+    }
+    .slide{
+        margin-top: 0;
+    }
+    .slide img{
+        height:calc(50vh - 80px);
+    }
+    
+    /* seccion nosotros */
+    .nosotros{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .nosotros__caja1{
+        height: 50px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .nosotros__titulo{
+        line-height: 50%;
+        text-decoration: underline;
+    }
+    .nosotros__caja2{
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .nosotros__parrafo{
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+    .nosotros__caja3{
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* seccionm productos */
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        position: relative;
+    }
+    .productos__titulo{
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+    .productos__titulo h2{
+        text-align: center;
+        text-decoration: underline;
+    }
+    .container{
+        height: auto;
+        width: 100%;
+        margin-top: 80px;
+    }
+    .card{
+        display: flex;
+        align-items: center;
+    }
+    .tienda{
+        width: 100%;
+        height: 100px;
+        position: relative;
+    }
+    .tienda__boton{
+        width: 200px;
+        padding: 10px;
+        font-size: 1.2rem;
+        position: absolute;
+        margin: 18px 25%;
+    }
+
+    /* secccion servicios */
+    .section__servicios{
+        height: auto;
+        position: relative;
+    }
+    .servicios__titulo{
+        height: 50px;
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+    .servicios__titulo-h2´{
+        font-size: 1.5rem;
+        position: absolute;
+        text-align: center;
+    }
+    
+    .padre{
+        grid-template-columns: 1fr;  
+    }
+
+    /* seccion contacto */
+    .section__contacto{
+        width: 100%;
+    }
+    .form{
+        width: 93%;
+        margin-left:-8px;
+    }
+    .form__label{
+        font-size: 1.2rem;
+    }
+    .form__input{
+        width: 98%;
+        margin-left: 5px;
+    }
+    .form__textarea{
+        width: 98%;
+        margin-left: 5px;
+    }
+    .form__boton{
+        width: 70%;
+        margin: 20px auto;
+        padding: 7px 0;
+    }
+
+    /* footer */
+    .footer{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .enlaces__items{
+        text-align: center;
+    }
+}
+
+
+
+
+/* media query para celular 320 */
+@media screen and (max-width: 320px){
+    .section__inicio{
+        width: 100%;
+        height: calc(50vh - 80px);
+    }
+    .slide{
+        margin-top: 0;
+    }
+    .slide img{
+        height:calc(50vh - 80px);
+    }
+    
+    /* seccion nosotros */
+    .nosotros{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .nosotros__caja1{
+        height: 50px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .nosotros__titulo{
+        line-height: 50%;
+        text-decoration: underline;
+    }
+    .nosotros__caja2{
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .nosotros__parrafo{
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+    .nosotros__caja3{
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* seccionm productos */
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        position: relative;
+    }
+    .productos__titulo{
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+    .productos__titulo h2{
+        text-align: center;
+        text-decoration: underline;
+    }
+    .container{
+        height: auto;
+        width: 100%;
+        margin-top: 80px;
+    }
+    .tienda{
+        width: 100%;
+        height: 100px;
+        position: relative;
+    }
+    .tienda__boton{
+        width: 200px;
+        padding: 10px;
+        font-size: 1.2rem;
+        position: absolute;
+        margin: 17px 23%;
+    }
+
+    /* secccion servicios */
+    .section__servicios{
+        height: auto;
+        position: relative;
+    }
+    .servicios__titulo{
+        height: 50px;
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+    .servicios__titulo-h2´{
+        font-size: 1.5rem;
+        position: absolute;
+        text-align: center;
+    }
+    
+    .padre{
+        grid-template-columns: 1fr;  
+    }
+
+    /* seccion contacto */
+    .section__contacto{
+        width: 100%;
+    }
+    .form{
+        width: 93%;
+        margin-left:-8px;
+    }
+    .form__label{
+        font-size: 1.2rem;
+    }
+    .form__input{
+        width: 98%;
+        margin-left: 5px;
+    }
+    .form__textarea{
+        width: 98%;
+        margin-left: 5px;
+    }
+    .form__boton{
+        width: 70%;
+        margin: 20px auto;
+        padding: 7px 0;
+    }
+
+    /* footer */
     .footer{
         height: auto;
         width: 100%;

@@ -45,15 +45,18 @@
           </div>
 
           <% dataProductos.forEach((prod)=>{ %>
-              <div class="card">
+            <div class="container">
+              <div class="card m-auto">
                 <a href="#"> <img src="<%= prod.imagen %>" class="card-img-top" alt="..."></a>
                 <div class="card-body">
-                  <h5 class="card-title text-center"><%= prod.nombre %></h5>
-                  <p class="card-text text-center"><%= prod.descripcion %></p>
-                  <p class="card-text text-center"><%= prod.precio %></p>
+                  <h5 class="card-title"><%= prod.nombre %></h5>
+                  <p class="card-text"><%= prod.descripcion %></p>
+                  <p class="card-text"><%= prod.precio %></p>
                   <a href="#" class="btn btn-primary">Comprar</a>
                 </div>
               </div>
+            </div>
+             
           <% }) %>;
         </section>
         

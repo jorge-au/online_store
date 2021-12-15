@@ -6,7 +6,7 @@
 .container{
     margin: auto;
     background-color: #d7dad7;
-    width: 30%;
+    width: 40%;
     height: 550px;
     position: relative;
     top: 80px;
@@ -62,4 +62,50 @@
 }
 .text a{
     text-decoration: none;
+}
+
+
+/* media query 768px  */
+@media screen and (max-width: 768px){
+    .container{
+        margin: auto;
+        background-color: #d7dad7;
+        width: 50%;
+    }
+}
+
+/* media query 576px */
+@media screen and (max-width: 576px) {
+    .container{
+        margin: auto;
+        background-color: #d7dad7;
+        width: 60%;
+    }
+}
+
+/* media query 425px */
+@media screen and (max-width: 425px) {
+    .container{
+        margin: auto;
+        background-color: #d7dad7;
+        width: 80%;
+    }
+}
+
+/* media query 375px */
+@media screen and (max-width: 375px) {
+    .container{
+        margin: auto;
+        background-color: #d7dad7;
+        width: 90%;
+    }
+}
+
+/* media query 320px */
+@media screen and (max-width: 320px) {
+    .container{
+        margin: auto;
+        background-color: #d7dad7;
+        width: 92%;
+    }
 }
