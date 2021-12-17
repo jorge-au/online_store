@@ -15,7 +15,7 @@
 
         <main class="main">
           <section id="inicio" class="section__inicio">
-           
+           <div class="carrusel"></div>
           </section>
         </main>
 
@@ -47,7 +47,7 @@
           <% dataProductos.forEach((prod)=>{ %>
             <div class="container">
               <div class="card m-auto" data-aos="zoom-in">
-                <a href="#"> <img src="<%= prod.imagen %>" class="card-img-top" alt="..."></a>
+                <a href="/masProductos"> <img src="<%= prod.imagen %>" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                   <h5 class="card-title"><%= prod.nombre %></h5>
                   <p class="card-text"><%= prod.descripcion %></p>

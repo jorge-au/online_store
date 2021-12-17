@@ -8,7 +8,11 @@ const {
     mensaje,
     loginUser,
     signUp,
-    registro
+    registro,
+    pageNotebook,
+    pagePcGamer,
+    pageCelular,
+    pageAuricular
 } = require('../controllers/tiendaControllers');
 
 routes.get('/', renderHome);
@@ -22,6 +26,14 @@ routes.get('/logIn', loginUser);
 routes.get('/signUp', signUp);
 
 routes.post('/registroEnviado', registro)
+
+routes.get('/notebooks', pageNotebook);
+
+routes.get('/pcGamer', pagePcGamer);
+
+routes.get('/celulares', pageCelular);
+
+routes.get('/auriculares', pageAuricular);
 
 
 

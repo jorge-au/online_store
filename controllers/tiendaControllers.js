@@ -48,11 +48,57 @@ const registro = (req, res)=>{
     })
 }
 
+const pageNotebook = (req, res)=>{
+    databaseConnection.query('SELECT * FROM productos WHERE categoria = "Notebooks"', (error, data)=>{
+        if(error){
+            console.log(error)
+        }else{
+            res.render('pages/notebooks', {data})
+        }
+    })
+}
+
+const pagePcGamer = (req, res)=>{
+    databaseConnection.query('SELECT * FROM productos WHERE categoria = "pc_escritorio"', (error, data)=>{
+        if(error){
+            console.log(error)
+        }else{
+            res.render('pages/pcGamer', {data});
+        }
+    })
+}
+
+const pageCelular = (req, res)=>{
+    databaseConnection.query('SELECT * FROM productos WHERE categoria = "celular"', (error, data)=>{
+        if(error){
+            console.log(error)
+        }else{
+            res.render('pages/celulares', {data});
+        }
+    })
+}
+
+const pageAuricular = (req, res)=>{
+    databaseConnection.query('SELECT * FROM productos WHERE categoria = "auriculares"', (error, data)=>{
+        if(error){
+            console.log(error)
+        }else{
+            res.render('pages/auriculares', {data});
+        }
+    })
+   
+}
+
+
 module.exports = {
     renderHome,
     verMasProdcutos,
     mensaje,
     loginUser,
     signUp,
-    registro
+    registro,
+    pageNotebook,
+    pagePcGamer,
+    pageCelular,
+    pageAuricular
 }
