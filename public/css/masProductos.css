@@ -1,5 +1,5 @@
 
-#masProductos{
+.masProductos{
     width: 100%;
 }
 .masProductos__titulo{
@@ -51,4 +51,29 @@
     padding: 6px;
     border: 1px solid black;
     border-radius: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .masProductos__titulo{
+        line-height: 3;
+    }
+    .main{
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+        gap: 15px;
+    }
+    .masProductos__card{
+        margin: auto;
+    }
+}
+
+/* media query para 576px */
+@media screen and (max-width: 576px) {
+
+    .main{
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 10px;
+    }
 }

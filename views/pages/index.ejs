@@ -13,25 +13,46 @@
   
     <!-- Seccion Principal --> 
 
-        <main class="main">
           <section id="inicio" class="section__inicio">
-           <div class="carrusel"></div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/pc_desktop_baner.jpg" class="d-block w-100 img_slide" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/portatil1_baner.jpg" class="d-block w-100 img_slide" alt="...">
+                </div>
+                <div class="carousel-item caja_auri">
+                  <img src="img/headphone.png" class="d-block img_slide auri" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </section>
-        </main>
+        
 
        <!-- Seccion Biografia --> 
+       
           <section id="nosotros" class=" container-fluid nosotros">
             <div class="nosotros__caja1">
               <h2 class="nosotros__titulo">Acerca de Nosotros</h2>
             </div>
             <div class="row">
-              <div class=" col-12 col-md-6 nosotros__caja2"  data-aos="fade-right">
+              <div class=" col-12 col-md-6 nosotros__caja2" data-aos="flip-left" data-aos-easing="ease-out-cubic">
                 <p class="nosotros__parrafo">Iniciamos operaciones en 2000, con la idea de ofrecer aparatos informaticos y soluciones tecnológicas de calidad en todo el pais.
                   <br/>
                   Desde siempre nos hemos mantenido a la vanguardia en el mercado para poder entregar un trabajo de calidad, un buen servicio y respaldo en cualquier necesidad que presenten nuestros clientes.
                 </p>
               </div>
-              <div class=" col-12 col-md-6 nosotros__caja3" data-aos="fade-left">
+              <div class=" col-12 col-md-6 nosotros__caja3" data-aos="flip-right"
+              data-aos-easing="ease-out-cubic">
                 <img src="img/equipo_trabajo.jpg" alt="" class="nosotros__imagen" />
               </div>
             </div>
@@ -39,11 +60,11 @@
 
 
        <!-- Seccion Productos --> 
-        <section id="productos" class="productos">
-          <div class="productos__titulo">
-            <h2>Nuestros Productos</h2>
-          </div>
-
+       <div class="productos__titulo">
+        <h2 id="productos">Nuestros Productos</h2>
+      </div>
+        <section class="productos">
+          
           <% dataProductos.forEach((prod)=>{ %>
             <div class="container">
               <div class="card m-auto" data-aos="zoom-in">
@@ -63,7 +84,7 @@
          <!-- boton de ir a Tienda -->
          <div class="tienda">
           <button class="tienda__boton">
-            <a href="/masProductos">Ver mas Productos</a>
+            <a href="/masProductos">Más Productos</a>
           </button>
         </div>
            
