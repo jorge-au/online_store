@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const routes = require('./routes/indexRoutes');
 const path = require('path');
-const port = 3000;
 const databaseConnection = require('./config/database');
+const port = process.env.PORT || 3000;
 
 
 //conexion a Mysql
@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //conf de rutas
-app.use('/',routes);
+app.use('',routes);
 
 //servidor
 app.listen(port, ()=>{
