@@ -39,7 +39,6 @@
     border: 1px solid black;
     border-radius: 5px;
     text-align: justify;
-    cursor: cell;
 }
 .form__btn{
     width: 100%;
