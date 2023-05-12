@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <%- include('../partials/meta.ejs', {title: 'Productos'}) %>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <%- include('../partials/nav.ejs') %>
-        <link rel="stylesheet" href="css/masProductos.css">
+      <%- include('../partials/nav.ejs') %>
+      <link rel="stylesheet" href="css/masProductos.css" />
     </header>
-    
+
     <div class="masProductos">
-        <h2 class="masProductos__titulo">Mas Productos</h2>
+      <h2 class="masProductos__titulo">Mas Productos</h2>
     </div>
 
     <div class="subMenu">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link" href="/notebooks">Notebooks</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pcGamer">Pc Escritorio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/celulares">Celulares</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/auriculares">Auriculares</a>
-            </li>
-          </ul>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/notebooks">Notebooks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pcGamer">Pc Escritorio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/celulares">Celulares</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/auriculares">Auriculares</a>
+        </li>
+      </ul>
     </div>
-        
-    <main class="main">
-        <% data.forEach((prod)=>{ %>
-        <div class="masProductos__card">
-            <a href=""><img src="<%= prod.imagen %>" alt="" class="masProductos__img"></a>
-            <div class="body">
-                <h5 class="body__titulo"><%= prod.nombre %></h5>
-                <p class="body__descripcion"><%= prod.descripcion %></p>
-                <p class="body__precio"><%= prod.precio %></p>
-                <button class="btn__comprar">Comprar</button>
-            </div>
-        </div>
-        <% }) %>
-    </main>
-    
 
-    
+    <main class="main">
+      <% data.forEach((prod)=>{ %>
+      <div class="masProductos__card">
+        <a href=""
+          ><img src="<%= prod.imagen %>" alt="" class="masProductos__img"
+        /></a>
+        <div class="body">
+          <h5 class="body__titulo"><%= prod.nombre %></h5>
+          <p class="body__descripcion"><%= prod.descripcion %></p>
+          <p class="body__precio"><%= prod.precio %></p>
+          <button class="btn__comprar">Comprar</button>
+        </div>
+      </div>
+      <% }) %>
+    </main>
+
     <!-- footer -->
     <%- include('../partials/footer.ejs') %>
 
     <!-- script de bootstrap -->
     <%- include('../partials/script_enlaces.ejs') %>
-</body>
+  </body>
 </html>

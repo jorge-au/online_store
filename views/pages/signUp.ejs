@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/signUp.css">
-   <title>Sign up</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/signUp.css" />
+    <title>Sign up</title>
+  </head>
+  <body>
     <div class="container">
-        <h1 class="title">Registrese Gratis</h1>
-        <div class="content">
-            <form action="/registroEnviado" method="POST" class="form">
-                <label class="form__label" for="nombre">Nombre</label>
-                <input class="form__input" type="text" name="nombre" id="nombre">
-        
-                <label class="form__label" for="apellido">Apellido</label>
-                <input class="form__input" type="text" name="apellido" id="apellido">
-        
-                <label class="form__label" for="email">Email</label>
-                <input class="form__input" type="email" name="email" id="email">
-        
-                <label class="form__label" for="contraseña">Contraseña</label>
-                <input class="form__input" type="password" name="contraseña" id="clave">
-                <input class="form__btn" type="submit" value="Registrarse" name="registrarse" id="registro">
-            </form>
-            <p class="text">Ya tienes una cuenta? <a href="/login">Iniciar sesión</a></p>
-            <p class="text"><a href="/">Volver al inicio</a></p>
-        </div>
+      <h1 class="title">Registrese Gratis</h1>
+      <div class="content">
+        <form action="/registroEnviado" method="POST" class="form">
+          <label class="form__label" for="nombre">Nombre</label>
+          <input class="form__input" type="text" name="nombre" id="nombre" />
+
+          <label class="form__label" for="apellido">Apellido</label>
+          <input
+            class="form__input"
+            type="text"
+            name="apellido"
+            id="apellido"
+          />
+
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="email" name="email" id="email" />
+
+          <label class="form__label" for="contraseña">Contraseña</label>
+          <input
+            class="form__input"
+            type="password"
+            name="contraseña"
+            id="clave"
+          />
+          <input
+            class="form__btn"
+            type="submit"
+            value="Registrarse"
+            name="registrarse"
+            id="registro"
+          />
+        </form>
+        <p class="text">
+          Ya tienes una cuenta? <a href="/login">Iniciar sesión</a>
+        </p>
+        <p class="text"><a href="/">Volver al inicio</a></p>
+      </div>
     </div>
-   
-</body>
+  </body>
 </html>

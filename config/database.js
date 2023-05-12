@@ -1,10 +1,11 @@
 const mysql = require('mysql2');
+const util = require("util");
 
 const databaseConnection = mysql.createConnection({
-    host:process.env.DB_HOST,
-    user:process.env.DB_USER,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASS,
+    host:process.env.DB__HOST,
+    user:process.env.DB__USER,
+    database: process.env.DB__DATABASE,
+    password: process.env.DB__PASS,
 });
 
 databaseConnection.connect((error)=>{
@@ -15,4 +16,5 @@ databaseConnection.connect((error)=>{
     }
 })
 
+databaseConnection.query = util.promisify(databaseConnection.query);
 module.exports = databaseConnection;
