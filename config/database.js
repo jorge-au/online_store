@@ -1,20 +1,19 @@
 const mysql = require('mysql2');
 const util = require("util");
 
-const databaseConnection = mysql.createConnection({
+const pool = mysql.createPool({
     host:process.env.DB__HOST,
     user:process.env.DB__USER,
     database: process.env.DB__DATABASE,
-    password: process.env.DB__PASS,
 });
 
-databaseConnection.connect((error)=>{
+pool.getConnection((error) => {
     if(error){
-        console.log(error);
+        console.warn("No conectado", {"error": error.message});
     }else{
-        console.log('Servidor conectado a MYSQL');
+        console.log('Servidor conectado a la Base de Datos');
     }
 })
 
-databaseConnection.query = util.promisify(databaseConnection.query);
-module.exports = databaseConnection;
+pool.query = util.promisify(pool.query);
+module.exports = pool;

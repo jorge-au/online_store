@@ -3,11 +3,8 @@ const express = require("express");
 const app = express();
 const routes = require("./routes/indexRoutes");
 const path = require("path");
-const databaseConnection = require("./config/database");
+const pool = require("./config/database");
 const port = process.env.PORT || 3000;
-
-//conexion a Mysql
-databaseConnection.connect();
 
 //config para usar archivos tipo json
 app.use(express.json());
