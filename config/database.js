@@ -9,7 +9,7 @@ const pool = mysql.createPool({
 
 pool.getConnection((error) => {
     if(error){
-        console.warn("No conectado", {"error": error.message});
+        console.warn("Error de conexión a la Base de Datos", {"error": error.message});
     }else{
         console.log('Servidor conectado a la Base de Datos');
     }

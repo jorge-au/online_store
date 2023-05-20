@@ -1,5 +1,6 @@
 const info = require('../productos.json');
 const {registerUser} = require("../models/model")
+const {hashPassword} = require("../utils/handlePassword");
 
 const renderHome = (req, res)=>{
     res.render('pages/index',{
@@ -48,13 +49,22 @@ const signUp = (req, res)=>{
 //     })
 // }
 const registro = async(req, res) => {
-    const dbResponse = await registerUser({...req.body})
+    const password = await hashPassword(req.body.contraseña)
+    const newUser = {
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        email: req.body.email,
+        contraseña: password
+    }
+    const dbResponse = await registerUser(newUser)
     if(dbResponse instanceof Error) {
         console.log("Hay un error")
     } else {
         res.render("pages/registroEnviado")
     }
-}
+};
+
+
 
 const pageNotebook = (req, res)=>{
     pool.query('SELECT * FROM productos WHERE categoria = "Notebooks"', (error, data)=>{

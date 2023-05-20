@@ -5,8 +5,7 @@ const getAllUsers = () => {
     try {
         return pool.query(query)
     } catch (error) {
-        error.message = error.code
-        return error
+        return {"error": error.code}
     }
 };
 
@@ -15,8 +14,7 @@ const registerUser = (user) => {
     try {
         return pool.query(query, user)
     } catch (error) {
-        error.message = error.code
-        return error
+        return {"error": error.code}
     }
 }
 
