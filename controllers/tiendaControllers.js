@@ -1,5 +1,5 @@
 const info = require('../productos.json');
-const {registerUser} = require("../models/model")
+const {registerUser, getAllUsers} = require("../models/model")
 const {hashPassword} = require("../utils/handlePassword");
 
 const renderHome = (req, res)=>{
@@ -49,12 +49,11 @@ const signUp = (req, res)=>{
 //     })
 // }
 const registro = async(req, res) => {
-    const password = await hashPassword(req.body.contraseña)
+    const password = await hashPassword(req.body.password)
     const newUser = {
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
+        name: req.body.name,
         email: req.body.email,
-        contraseña: password
+        password: password
     }
     const dbResponse = await registerUser(newUser)
     if(dbResponse instanceof Error) {

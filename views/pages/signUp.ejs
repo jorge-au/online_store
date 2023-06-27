@@ -6,6 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/signUp.css" />
+
+  <!-- Bootstrap -->
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
   <title>Sign up</title>
 </head>
 
@@ -14,25 +22,41 @@
     <h1 class="title">Registrese Gratis</h1>
     <div class="content">
       <form action="/registroEnviado" method="POST" class="form">
-        <label class="form__label" for="nombre">Nombre</label>
-        <input class="form__input" type="text" name="nombre" id="nombre" />
-
-        <label class="form__label" for="apellido">Apellido</label>
-        <input class="form__input" type="text" name="apellido" id="apellido" />
+        <label class="form__label" for="name">Nombre</label>
+        <input class="form__input" type="text" name="name" id="name"  value="<% if(typeof valores != 'undefined') { %><%= valores.name %><%}%>"/>
 
         <label class="form__label" for="email">Email</label>
-        <input class="form__input" type="email" name="email" id="email" />
+        <input class="form__input" type="text" name="email" id="email" value="<%if(typeof valores != 'undefined') { %><%= valores.email %><%}%>"/>
 
-        <label class="form__label" for="contraseña">Contraseña</label>
-        <input class="form__input" type="password" name="contraseña" id="clave" />
-        <input class="form__btn" type="submit" value="Registrarse" id="registro"/>
+        <label class="form__label" for="password">Contraseña</label>
+        <input class="form__input" type="password" name="password" id="password"  value="<% if(typeof valores != 'undefined') { %><%= valores.password %><%}%>"/>
+
+        <input class="form__btn" type="submit" value="Registrarse" id="submit"/>
+
+        <p class="text">
+          Ya tienes una cuenta? <a href="/login">Iniciar sesión</a>
+        </p>
+        <p class="text"><a href="/">Volver al inicio</a></p>
       </form>
-      <p class="text">
-        Ya tienes una cuenta? <a href="/login">Iniciar sesión</a>
-      </p>
-      <p class="text"><a href="/">Volver al inicio</a></p>
+
+      <!-- Alerts -->
+        <% if(typeof validaciones !='undefined' ) { %>
+          <% validaciones.forEach( (validacion) => {  %> 
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong><%= validacion.msg %></strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <% }) %>
+        <% } %>
+      
     </div>
   </div>
-</body>
 
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous"
+></script>
+
+</body>
 </html>

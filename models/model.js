@@ -1,7 +1,7 @@
 const pool = require("../config/database");
 
 const getAllUsers = () => {
-    const query = `SELECT * FROM usuarios`
+    const query = `SELECT * FROM users`
     try {
         return pool.query(query)
     } catch (error) {
@@ -10,7 +10,7 @@ const getAllUsers = () => {
 };
 
 const registerUser = (user) => {
-    const query = `INSERT INTO usuarios SET ?`
+    const query = `INSERT INTO users SET ?`
     try {
         return pool.query(query, user)
     } catch (error) {
