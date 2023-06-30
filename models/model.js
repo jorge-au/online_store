@@ -18,7 +18,16 @@ const registerUser = (user) => {
     }
 }
 
+const sendMessage = (message) => {
+    const query = `INSERT INTO mensaje SET ?`
+    try {
+        return pool.query(query, message)
+    } catch (error) {
+        return {"error": error.code}
+    }
+}
 module.exports = {
     getAllUsers,
-    registerUser
+    registerUser,
+    sendMessage
 }

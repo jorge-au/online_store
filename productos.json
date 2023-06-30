@@ -22,6 +22,30 @@
         "imagen":"img/audifonos.png",
         "descripcion":"Pc Escritorio 1Tb HHD 16gb Ram i core 9",
         "precio":"$140.000"
+    },
+    {
+        "nombre":"Hp Pavivllion",
+        "imagen":"img/desktop.png",
+        "descripcion":"Pc Escritorio 1Tb HHD 16gb Ram i core 9",
+        "precio":"$140.000"
+    },
+    {
+        "nombre":"Hp Pavivllion",
+        "imagen":"img/macbookAir.png",
+        "descripcion":"procedsador M1 1Tb SSD 32gb Ram",
+        "precio":"$300.000"
+    },
+    {
+        "nombre":"Hp Pavivllion",
+        "imagen":"img/iphone.png",
+        "descripcion":"Pc Escritorio 1Tb HHD 16gb Ram i core 9",
+        "precio":"$140.000"
+    },
+    {
+        "nombre":"Hp Pavivllion",
+        "imagen":"img/audifonos.png",
+        "descripcion":"Pc Escritorio 1Tb HHD 16gb Ram i core 9",
+        "precio":"$140.000"
     }
 ]
 

@@ -1,18 +1,18 @@
 const { check, validationResult } = require('express-validator');
 
 const validatorCreateUser = [
-    check("name", "nombre es requerido")
-    .exists()
+    check("name")
+    .exists().withMessage("Nombre es requrido")
     .trim()
     .isLength({min: 2, max: 90}),
 
     check("email")
-    .exists()
+    .exists().withMessage("Email es requerido")
     .isEmail().withMessage("Debe ingresar un email valido")
     .normalizeEmail(),
 
-    check("password", "password es requerido")
-    .exists()
+    check("password")
+    .exists().withMessage("Password es requerido")
     .isLength({ min: 8 }).withMessage("Password debería tener minimo 8 caracteres")
     .trim(),
 

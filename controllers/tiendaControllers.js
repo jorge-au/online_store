@@ -1,5 +1,5 @@
 const info = require('../productos.json');
-const {registerUser, getAllUsers} = require("../models/model")
+const {registerUser, sendMessage} = require("../models/model")
 const {hashPassword} = require("../utils/handlePassword");
 
 const renderHome = (req, res)=>{
@@ -20,15 +20,14 @@ const verMasProdcutos = (req, res)=>{
     })
 }
 
-const mensaje = (req, res)=>{
-    const {nombre,email,mensaje} = req.body;
-    pool.query('INSERT INTO mensaje(nombre,email,mensaje)VALUES(?, ?, ?)',[nombre,email,mensaje],(error, data)=>{
-        if (error){
-            console.log(error);
-        }else{
-           res.render('pages/mensajeEnviado')
-        }
-    })
+const mensaje = async(req, res)=>{
+  const dbResponse = await sendMessage(req.body) 
+  console.log(dbResponse)
+  if(dbResponse instanceof Error) {
+    console.log("Hubo un error")
+  } else {
+    res.render('pages/mensajeEnviado')
+  }
 }
 
 const loginUser = (req, res)=>{
@@ -38,16 +37,7 @@ const loginUser = (req, res)=>{
 const signUp = (req, res)=>{
     res.render('pages/signUp')
 }
-// const registro = (req, res)=>{
-//     const{nombre,apellido,email,contraseña} = req.body;
-//     pool.query('INSERT INTO registro(nombre,apellido,email,contraseña)VALUES(?,?,?,?)',[nombre,apellido,email,contraseña],(error, data)=>{
-//         if(error){
-//             console.log(error);
-//         }else{
-//             res.render('pages/registroEnviado');
-//         }
-//     })
-// }
+
 const registro = async(req, res) => {
     const password = await hashPassword(req.body.password)
     const newUser = {
@@ -62,8 +52,6 @@ const registro = async(req, res) => {
         res.render("pages/registroEnviado")
     }
 };
-
-
 
 const pageNotebook = (req, res)=>{
     pool.query('SELECT * FROM productos WHERE categoria = "Notebooks"', (error, data)=>{
